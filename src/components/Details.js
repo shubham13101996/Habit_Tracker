@@ -1,9 +1,9 @@
 import React from "react";
 import "./Details.css";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function Details() {
-
+  // useSelector hooks to use the store's state and get the list of task
   const list = useSelector((state) => state.todoReducers.list);
 
   const date = new Date();
@@ -12,16 +12,16 @@ function Details() {
       <h1 className="Title text-center">Weekly Updates Are Available 👇🏻 🕵🏻‍♂️</h1>
 
       <div className="main-div bg-light list-group-item my-4">
-                {list.map((elem) => {
-                return (
-                <div className="details col-8 mx-auto" key={elem.id}>
-                <table className="my-4">
+        {/* iterate over the list using map() method and return the task with tracking table  */}
+        {list.map((elem) => {
+          return (
+            <div className="details col-8 mx-auto" key={elem.id}>
+              <table className="my-4">
                 <tr className="taskname">
-                <td className="tableTitle text-center" colSpan="7">
-                {elem.task + " on the date of "}
-                {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
-                </td>
-                
+                  <td className="tableTitle text-center" colSpan="7">
+                    {elem.task + " on the date of "}
+                    {date.getDate()}/{date.getMonth() + 1}/{date.getFullYear()}
+                  </td>
                 </tr>
                 <tr>
                   <th>Sunday</th>
@@ -34,53 +34,53 @@ function Details() {
                 </tr>
                 <tr>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                   <td>
-                  <select id="status">
-                  <option value="volvo">None</option>
-                  <option value="saab">Done</option>
-                  <option value="opel">Undone</option>
-                 </select>
+                    <select id="status">
+                      <option value="volvo">None</option>
+                      <option value="saab">Done</option>
+                      <option value="opel">Undone</option>
+                    </select>
                   </td>
                 </tr>
               </table>
