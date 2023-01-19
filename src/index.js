@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import Navbar from "./components/Navbar";
+import store from "./store";
+import "./components/Todo.css";
+import { Provider } from "react-redux";
 
-import App from './App';
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Provider store ={store}>
+     <Navbar/>
+     <footer className="card-footer bg-transparent border-success">
+     <p className="homeTitle text-center">  Track Your Habits | | As People do not decide their future, they decide their habits and their habits decide their future | | </p>
+     </footer>
+    </Provider>
+  </StrictMode>
 );
-
-
