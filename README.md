@@ -2,14 +2,43 @@
 
 ## Features
 
-Add multiple habits to track like reading a book, going to the gym etc
-Track each habit everyday. These are the 3 statuses of a habit:
-Done - Mark the habit as done for a day
-Undone - Mark the habit as not done for a day
-None - User did not take any action on a habit for a day
-A view to show all current habits.Given an add button where we can add a new habit to track.
-We can toggle between the three (above mentioned) statuses of a habit i.e. I can change today’s status as done, undone or none anytime.
-Also we should be able to change any of the previous days status i.e. we can change the status of a habit for yesterday, day before yesterday or any previous 6 days as well.
+Add multiple habits to track like reading a book, going to the gym etc<br/>
+Track each habit everyday. These are the 3 statuses of a habit:<br/>
+Done - Mark the habit as done for a day<br/>
+Undone - Mark the habit as not done for a day<br/>
+None - User did not take any action on a habit for a day<br/>
+A view to show all current habits.Given an add button where we can add a new habit to track.<br/>
+We can toggle between the three (above mentioned) statuses of a habit i.e. I can change today’s status as done, undone or none anytime.<br/>
+Also we should be able to change any of the previous days status i.e. we can change the status of a habit for yesterday, day before yesterday or any previous 6 days as well.<br/>
+
+## Links
+
+Video Link: https://youtu.be/Menu-EeEOcA
+Host link: https://shubham13101996.github.io/Habit_Tracker/
+
+## Approach
+
+use Redux To centralized the state so that each and every components can access the state from store when required.<br/>
+Redux has 3 main contrubitors i.e. Actions, Reducers, Store.<br/>
+Actions are plain javascript objects with a type field. In other words, you can
+think of an event that describes what happened in the app. Actions are the
+only source of information for the store. It carries a payload of information
+from the app to the store.<br/>
+Reducers are pure functions in Redux. Pure functions can be predicted
+easily. Reducers are the only way to change states in Redux. This is the only
+place where you can write calculations and logic. The reducer function
+accepts the previous state of the application and the action calculates the
+next state and returns the new object.<br/>
+The store is the immutable object tree in Redux. The store is the state
+container that holds the state of the application. Your app only has one store
+of Redux. Whenever you create a store on Redux, you must specify the
+reducer.<br/>
+Use "createStore" from redux to create the store.<br/>
+Use "combineReducer" from redux : it turns an object whose values are different reducer functions, into a single reducer function. It will call every child reducer, and gather their results into a single state object, whose keys correspond to the keys of the passed reducer functions and return a reducer function that invokes every reducer inside the passed object, and builds a state object with the same shape.<br/>
+Use "<Provider>" from react-redux to pass the store as prop to make the store globally accesesble by all component.<br.>
+Use "BrowseRouter" from react-router-dom for Routing Functionality<br/>
+Use "useSelector": A hook to access the redux store's state. This hook takes a selector function as an argument. The selector is called with the store state and returns —> the selected state<br/>
+Use "useDispatch": A hook to access the redux dispatch function and returns-> redux store's dispatch function<br/>
 
 # Getting Started with Create React App
 
