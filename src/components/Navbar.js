@@ -8,7 +8,7 @@ const Navbar = () => {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/home">
+            <Link className="navbar-brand" to="/">
               <i className="fa-solid fa-pen-nib"></i> Task Manager
             </Link>
             <button
@@ -28,11 +28,7 @@ const Navbar = () => {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <Link
-                    className="nav-link fs-5"
-                    aria-current="page"
-                    to="/home"
-                  >
+                  <Link className="nav-link fs-5" aria-current="page" to="/">
                     Home
                   </Link>
                 </li>
@@ -47,7 +43,7 @@ const Navbar = () => {
         </nav>
         <Routes>
           <Route exact path="/Details" element={<Details />} />
-          <Route path="/home" element={<Todo />} />
+          <Route path="/" element={<Todo />} />
         </Routes>
       </div>
     </Router>

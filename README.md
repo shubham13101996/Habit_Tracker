@@ -1,3 +1,16 @@
+## HABIT TRACKER 🕵🏻‍♂️
+
+## Features
+
+Add multiple habits to track like reading a book, going to the gym etc
+Track each habit everyday. These are the 3 statuses of a habit:
+Done - Mark the habit as done for a day
+Undone - Mark the habit as not done for a day
+None - User did not take any action on a habit for a day
+A view to show all current habits.Given an add button where we can add a new habit to track.
+We can toggle between the three (above mentioned) statuses of a habit i.e. I can change today’s status as done, undone or none anytime.
+Also we should be able to change any of the previous days status i.e. we can change the status of a habit for yesterday, day before yesterday or any previous 6 days as well.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
